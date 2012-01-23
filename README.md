@@ -6,7 +6,10 @@ http://clojurescriptone.com
 ## Usage
 Install lein-newnew (https://github.com/Raynes/lein-newnew)
 
-```lein plugin install lein-newnew 0.1.2```
+```
+lein plugin install lein-newnew 0.1.2
+lein plugin install lein-clsjnoir 0.1.0
+```
 
 ```bash
 lein new cljsnoir {{name}}
