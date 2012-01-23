@@ -15,7 +15,8 @@ sh script/repl
 (run-server)
 ```
 
-For the clojurescript repl
+For the clojurescript repl:
+
 ```clojure
 (use '{{name}}.dev-server)
 (cljs-repl)
