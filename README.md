@@ -4,6 +4,10 @@ A Leiningen template for noir + clojurescript project, derived from the clojures
 http://clojurescriptone.com
 
 ## Usage
+Install lein-newnew (https://github.com/Raynes/lein-newnew)
+
+```lein plugin install lein-newnew 0.1.2```
+
 ```bash
 lein new cljsnoir {{name}}
 lein deps
