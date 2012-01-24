@@ -4,11 +4,22 @@ A Leiningen template for noir + clojurescript project, derived from the clojures
 http://clojurescriptone.com
 
 ## Usage
-Install lein-newnew (https://github.com/Raynes/lein-newnew)
+Requires lein-newnew (https://github.com/Raynes/lein-newnew)
+
+To install:
 
 ```
 lein plugin install lein-newnew 0.1.2
 lein plugin install lein-cljsnoir 0.2.0
+```
+
+To create a new project:
+
+```bash
+lein new cljsnoir {{name}}
+lein deps
+sh script/repl
+```
 
 To run the server and start clojure repl:
 
@@ -21,13 +32,8 @@ To start the server, a cljs-repl, and open a browser run:
 ```
 sh script/clj-repl
 ```
-```
 
-```bash
-lein new cljsnoir {{name}}
-lein deps
-sh script/repl
-```
+To run the server from within a repl (or slime):
 
 ```clojure
 (use '{{name}}.dev-server)
