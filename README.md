@@ -8,7 +8,19 @@ Install lein-newnew (https://github.com/Raynes/lein-newnew)
 
 ```
 lein plugin install lein-newnew 0.1.2
-lein plugin install lein-cljsnoir 0.1.0
+lein plugin install lein-cljsnoir 0.2.0
+
+To run the server and start clojure repl:
+
+```
+sh script/run
+```
+
+To start the server, a cljs-repl, and open a browser run:
+
+```
+sh script/clj-repl
+```
 ```
 
 ```bash
