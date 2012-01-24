@@ -8,7 +8,7 @@
 (defn topbar [environment]
   [:div.topbar
    [:div.topbar-inner
-    [:div.container-fluid
+    [:div.container
      [:a.brand {:href "/"} "{{capitalized}}"]
      (if (= :development environment)
        [:ul#navigation.nav
@@ -23,17 +23,20 @@
   (ph/html5
    [:head
     [:title "{{capitalized}}"]
+    [:meta {:charset "utf-8"}]
     [:meta {:http-equiv "Content-Type" :content "text/html; charset=UTF-8"}]
     [:meta {:http-equiv "X-UA-Compatible" :content "IE=7;IE=8;IE=edge"}]
-
     "<!--[if lt IE 9]>
         <script src=\"http://html5shiv.googlecode.com/svn/trunk/html5.js\"></script>
      <![endif]-->"
     (ph/include-css "/css/bootstrap.css"
                     "/css/{{name}}.css")]
    [:body (topbar environment)
-    [:div.container-fluid]
-    [:footer [:p "&copy; {{capitalized}} 2012"]]
+    [:div.container
+     [:div#content
+        [:div#greet-box.hero-unit]]
+     [:footer [:p "&copy; {{capitalized}} 2012"]]]
+
     (if (= :development environment)
       (concat [(ph/include-js "javascripts/out/goog/base.js")
                (ph/include-js (str "javascripts/" (:dev-js-file-name config)))]
