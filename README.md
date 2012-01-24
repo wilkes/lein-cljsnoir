@@ -30,7 +30,7 @@ sh script/run
 To start the server, a cljs-repl, and open a browser run:
 
 ```
-sh script/clj-repl
+sh script/cljs-repl
 ```
 
 To run the server from within a repl (or slime):
